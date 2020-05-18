@@ -105,9 +105,9 @@ namespace CA_Aoife_Egan_S00167887
         public void make_data(double ymin, double ymax, double xmin, double xmax, double step)
         {
             // make some data sets
-            Brush[] brushes = { Brushes.Red, Brushes.Green, Brushes.Blue };
+            Brush[] brushes = { Brushes.Black }; //, Brushes.Green, Brushes.Blue };
             Random rand = new Random();
-            for (int data_set = 0; data_set < 3; data_set++)
+            for (int data_set = 0; data_set < 1; data_set++)
             {
                 int last_y = rand.Next((int)ymin, (int)ymax);
 
@@ -132,6 +132,22 @@ namespace CA_Aoife_Egan_S00167887
                 polyline.Points = points;
 
                 graph.Children.Add(polyline);
+
+                //place dots at data points
+                const float width = 4;
+                const float radius = width / 2;
+                foreach (Point point in points)
+                {
+                    Ellipse dot = new Ellipse();
+                    dot.SetValue(Canvas.LeftProperty, point.X - radius);
+                    dot.SetValue(Canvas.TopProperty, point.Y - radius);
+                    dot.Fill = brushes[data_set];
+                    dot.Stroke = brushes[data_set];
+                    dot.StrokeThickness = 1;
+                    dot.Width = width;
+                    dot.Height = width;
+                    graph.Children.Add(dot);
+                }
             }
         }
     }
