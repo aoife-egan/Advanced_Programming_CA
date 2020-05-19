@@ -6,20 +6,21 @@
         xmlns:local="clr-namespace:CA_Aoife_Egan_S00167887"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Label Content="X" HorizontalAlignment="Left" Margin="41,31,0,0" VerticalAlignment="Top"/>
-        <Label Content="Y" HorizontalAlignment="Left" Margin="114,31,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtbxX" HorizontalAlignment="Left" Height="23" Margin="30,57,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.06,0.424"/>
-        <TextBox x:Name="txtbxY" HorizontalAlignment="Left" Height="23" Margin="102,57,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="42"/>
-        <Button x:Name="btnEnterData" Content="Enter" HorizontalAlignment="Left" Margin="166,57,0,0" VerticalAlignment="Top" Width="55" Height="23" Click="btnEnterData_Click"/>
-        <TextBox x:Name="txtbxN" HorizontalAlignment="Left" Height="22" Margin="30,126,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="71"/>
-        <Button x:Name="btnAddN" Content="Add to data points" HorizontalAlignment="Left" Margin="114,126,0,0" VerticalAlignment="Top" Width="113" Height="22" Click="btnAddN_Click"/>
-        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="30,184,0,0" VerticalAlignment="Top" Width="83
-                " Click="btnSave_Click"/>
-        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="144,184,0,0" VerticalAlignment="Top" Width="83" Click="btnCancel_Click"/>
-        <Canvas x:Name="graph" HorizontalAlignment="Left" Height="378" Margin="273,10,0,0" VerticalAlignment="Top" Width="509"/>
-        <ListBox x:Name="listbxInfo" HorizontalAlignment="Left" Height="152" Margin="32,236,0,0" VerticalAlignment="Top" Width="195"/>
-        <Button x:Name="btnPlot" Content="Plot Graph" HorizontalAlignment="Left" Margin="84,92,0,0" VerticalAlignment="Top" Width="75" Click="btnPlot_Click"/>
+    <Grid Name="grid1">
+        <Label Content="X" HorizontalAlignment="Left" Margin="117,124,0,0" VerticalAlignment="Top"/>
+        <Label Content="Y" HorizontalAlignment="Left" Margin="210,122,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtbxX" HorizontalAlignment="Left" Height="23" Margin="104,150,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.06,0.424"/>
+        <TextBox x:Name="txtbxY" HorizontalAlignment="Left" Height="23" Margin="198,150,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="42"/>
+        <Button x:Name="btnEnterData" Content="Enter" HorizontalAlignment="Left" Margin="288,150,0,0" VerticalAlignment="Top" Width="55" Height="23" Click="btnEnterData_Click"/>
+        <TextBox x:Name="txtbxN" HorizontalAlignment="Left" Height="22" Margin="102,276,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="71"/>
+        <Button x:Name="btnAddN" Content="Change data points" HorizontalAlignment="Left" Margin="230,274,0,0" VerticalAlignment="Top" Width="113" Height="22" Click="btnAddN_Click"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="100,314,0,0" VerticalAlignment="Top" Width="83" Click="btnSave_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="260,314,0,0" VerticalAlignment="Top" Width="83" Click="btnCancel_Click"/>
+        <Canvas x:Name="graph" HorizontalAlignment="Left" Height="210" Margin="432,113,0,0" VerticalAlignment="Top" Width="210"/>
+        <Button x:Name="btnPlot" Content="Plot Graph" HorizontalAlignment="Left" Margin="177,199,0,0" VerticalAlignment="Top" Width="75" Click="btnPlot_Click"/>
+        <RadioButton x:Name="rbtnLight" GroupName="themes" Content="Light Theme" HorizontalAlignment="Left" Margin="104,71,0,0" VerticalAlignment="Top" Checked="rbtnLight_Checked"/>
+        <RadioButton x:Name="rbtnDark" GroupName="themes" Content="Dark Theme" HorizontalAlignment="Left" Margin="235,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.497,1.867" Checked="rbtnDark_Checked"/>
+        <Label Content="Enter a value for N. N+1 will be added to X and N+2 will be added to Y" HorizontalAlignment="Left" Margin="23,230,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
