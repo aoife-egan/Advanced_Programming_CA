@@ -12,15 +12,14 @@
         <TextBox x:Name="txtbxX" HorizontalAlignment="Left" Height="23" Margin="104,150,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.06,0.424"/>
         <TextBox x:Name="txtbxY" HorizontalAlignment="Left" Height="23" Margin="198,150,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="42"/>
         <Button x:Name="btnEnterData" Content="Enter" HorizontalAlignment="Left" Margin="288,150,0,0" VerticalAlignment="Top" Width="55" Height="23" Click="btnEnterData_Click"/>
-        <TextBox x:Name="txtbxN" HorizontalAlignment="Left" Height="22" Margin="102,276,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="71"/>
-        <Button x:Name="btnAddN" Content="Change data points" HorizontalAlignment="Left" Margin="230,274,0,0" VerticalAlignment="Top" Width="113" Height="22" Click="btnAddN_Click"/>
+        <Button x:Name="btnAddN" Content="Change data points" HorizontalAlignment="Left" Margin="164,274,0,0" VerticalAlignment="Top" Width="113" Height="22" Click="btnAddN_Click"/>
         <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="100,314,0,0" VerticalAlignment="Top" Width="83" Click="btnSave_Click"/>
         <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="260,314,0,0" VerticalAlignment="Top" Width="83" Click="btnCancel_Click"/>
         <Canvas x:Name="graph" HorizontalAlignment="Left" Height="210" Margin="432,113,0,0" VerticalAlignment="Top" Width="210"/>
         <Button x:Name="btnPlot" Content="Plot Graph" HorizontalAlignment="Left" Margin="177,199,0,0" VerticalAlignment="Top" Width="75" Click="btnPlot_Click"/>
         <RadioButton x:Name="rbtnLight" GroupName="themes" Content="Light Theme" HorizontalAlignment="Left" Margin="104,71,0,0" VerticalAlignment="Top" Checked="rbtnLight_Checked"/>
         <RadioButton x:Name="rbtnDark" GroupName="themes" Content="Dark Theme" HorizontalAlignment="Left" Margin="235,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.497,1.867" Checked="rbtnDark_Checked"/>
-        <Label Content="Enter a value for N. N+1 will be added to X and N+2 will be added to Y" HorizontalAlignment="Left" Margin="23,230,0,0" VerticalAlignment="Top"/>
+        <Label Content="N+10 will be added to X and N+20 will be subtracted from Y" HorizontalAlignment="Left" Margin="61,236,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
