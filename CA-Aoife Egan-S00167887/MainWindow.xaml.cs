@@ -74,16 +74,26 @@ namespace CA_Aoife_Egan_S00167887
 
         private void btnEnterData_Click(object sender, RoutedEventArgs e)
         {
-            // data is read in using the main thread
-
-            //read in X & Y values
-            double X = Double.Parse(txtbxX.Text);
-            double Y = Double.Parse(txtbxY.Text);
+            double X, Y;            
+            // data is read in using the main thread        
+            
+            //double X = Double.Parse(txtbxX.Text);
+            //double Y = Double.Parse(txtbxY.Text);
             Monitor.Enter(synObj);
             try
             {
-                //create data points
-                points.Add(new Point(X, Y));
+                //read in X & Y values & validate user input
+                if (Double.TryParse(txtbxX.Text, out X) && Double.TryParse(txtbxY.Text, out Y))
+                {
+                    //create data points
+                    points.Add(new Point(X, Y));
+
+                }
+                else
+                {
+                    MessageBox.Show("Please input a number in double format");
+                }
+                
             }
             catch (Exception err)
             {
@@ -408,13 +418,13 @@ namespace CA_Aoife_Egan_S00167887
             if (rbtnLight.IsChecked != false)
             {
                 //create thread to access file 
-                // t6 sets dark theme & writes to isolated storage
+                // t5 sets light theme & writes to isolated storage
                 Thread t5 = new Thread(new ParameterizedThreadStart(threadingObj.writeToStorage));
                 //set thread name
                 t5.Name = "Thread 5";
                 //setting as background thread
                 t5.IsBackground = true;
-                // start t6  thread & pass theme colour into it 
+                // start t5  thread & pass theme colour into it 
                 string colour = "White";
                 t5.Start(colour);
             }
